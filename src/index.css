@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'clegan'; /* Choose a name for the font */
+  src: url('/fonts/CLEGAN.otf')
+}
+
+:root{
+  --primary-color: #4668ee;
+  --text-color: #1a202c;
+  --text-light-color: #555;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  body {
+    margin: 0;
+    ;
+  }
+  
+  .WoodenSignWithChain{
+    font-family: 'clegan',sans-serif;
+    pointer-events: none;
+    
+  }
+
+  .intro{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    width: 300px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 4px solid blue;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .hideintro {
+    opacity: 0;
+  }
+
+  .AnimalBoard {
+    font-family: 'clegan',sans-serif;
+    pointer-events: none;
+    font-size: larger;
+  }
+
+  .AnimalInfoHead {
+    font-family: 'clegan',sans-serif;
+    pointer-events: none;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .AnimalInfo {
+    margin: 0;
+    padding: 0;
+    height: 66px;
+    width: 380px;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    background-color: #b8c6db;
+    background-image: linear-gradient(0deg, #b8c6db 0%, #f5f7fa 74%);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .loading-screen--hidden {
+    animation: fade-out 0.5s ease-in-out forwards 1s;
+    pointer-events: none;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .loading-screen__title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress__container {
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(102, 106, 113 / 42%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  .progress__bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--text-color);
+    transition: width 0.5s ease-in-out;
+  }
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.bySaadKhan {
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom Right Corner Buttons */
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10; /* Ensure above Canvas */
+}
+
+/* Bottom Left Corner Buttons */
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10; /* Ensure above Canvas */
+}
+
+.arrow-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.horizontal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Game Button Styling */
+.game-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.game-button:hover {
+  background: linear-gradient(145deg, #5a5a5a, #4a4a4a);
+}
+
+.game-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .bottom-left, .bottom-right {
+    bottom: 75px;
+  }
+}
