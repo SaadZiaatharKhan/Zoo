@@ -24,7 +24,8 @@ This website can be accessed without optimization from [https://saad-zoo.netlify
 - Some features such as smooth walking and rotation animation, rabbit and panda waving hand on hover, looking up and down, and sound on walking, are not available for mobile devices.
 - Loading may take time.
 - `dist` folder contains the built files.
-- If in mobile `Left` or any other button does not work, press any other button then try again.
+- In mobile, don't touch the buttons very fast.
+- If in mobile, `Left` or any other button does not work, press any other button then try again.
 - Had to optimize ground.glb for fast reloading so textures of plants and trees will be a bit low.
 - Can crash sometimes on low end devices or places with low internet connection.
 - Needs fast internet or prone to crash.
